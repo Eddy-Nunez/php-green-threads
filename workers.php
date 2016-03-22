@@ -1,6 +1,6 @@
 <?php
 /**
- * List of worker callback functions and any helpers.
+ * List of worker callback and helper functions.
  * 
  * NOTE: $acc is an "accumulator". This value is used to essentially
  * control the execution status aswell as to pass relevant callback data.
@@ -38,6 +38,8 @@ function printWork( $acc ) {
  * Worker callback to read a file and print out it's contents.
  * 
  * @param mixed     $acc    accumulator value (see header note)
+ *                          if array, options:
+ *                          filename: filename to read from.
  * @return mixed
  */
 function fileWork( $acc ) {
